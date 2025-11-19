@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maratona Tech | Gestão de Votação para Hackathons</title>
+    
+    <!-- Google Fonts: Inter & Space Grotesk -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- Lucide Icons (Library) -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- Main Script -->
+    <script src="js/main.js" defer></script>
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <div class="container nav-container">
+            <a href="#" class="logo">
+                <i data-lucide="zap" color="#38bdf8"></i>
+                Maratona<span>Tech</span>
+            </a>
+            <nav class="nav-links">
+                <a href="#como-funciona">Como Funciona</a>
+                <a href="#features">Funcionalidades</a>
+                <a href="#faq">FAQ</a>
+            </nav>
+            <div class="nav-actions">
+                <a href="#" class="btn btn-outline">Entrar</a>
+                <a href="#" class="btn btn-primary">Criar Evento</a>
+            </div>
+            <div class="mobile-toggle">
+                <i data-lucide="menu"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <div class="container hero-content">
+            <div class="hero-text">
+                <span class="badge">Novo: Ranking em Tempo Real 🚀</span>
+                <h1>Decisões justas para <br><span class="text-gradient">grandes ideias.</span></h1>
+                <p>Gerencie hackathons e competições com transparência total. Sistema auditável que combina voto popular e avaliação técnica automaticamente.</p>
+                
+                <div class="cta-group">
+                    <a href="#" class="btn btn-primary btn-large">
+                        Criar Meu Evento
+                        <i data-lucide="arrow-right" size="18"></i>
+                    </a>
+                    <a href="#" class="btn btn-outline btn-large">
+                        Ver Demonstração
+                    </a>
+                </div>
+            </div>
+
+            <!-- CSS Mockup Visualization -->
+            <div class="hero-visual">
+                <div class="mockup-window">
+                    <div class="window-header">
+                        <div class="dot red"></div>
+                        <div class="dot yellow"></div>
+                        <div class="dot green"></div>
+                    </div>
+                    <div class="window-body">
+                        <div class="mock-stat-row">
+                            <div class="mock-card">
+                                <h4>Votos Processados</h4>
+                                <div class="value">12,450</div>
+                            </div>
+                            <div class="mock-card">
+                                <h4>Pitchs Ativos</h4>
+                                <div class="value">24</div>
+                            </div>
+                        </div>
+                        
+                        <div style="margin-top: 20px;">
+                            <h5 style="color: var(--text-muted); margin-bottom: 15px; font-size: 0.9rem;">Ranking Combinado (Popular + Técnico)</h5>
+                            
+                            <!-- Mock Ranking Item 1 -->
+                            <div class="mock-list-item">
+                                <div class="mock-avatar"></div>
+                                <div style="flex:1">
+                                    <div style="display:flex; justify-content:space-between; margin-bottom:4px; font-size:0.9rem; font-weight:600;">
+                                        <span>EcoTech Solution</span>
+                                        <span style="color:var(--accent)">9.8</span>
+                                    </div>
+                                    <div class="mock-bar"><div class="mock-fill" style="width: 98%;"></div></div>
+                                </div>
+                            </div>
+
+                            <!-- Mock Ranking Item 2 -->
+                            <div class="mock-list-item">
+                                <div class="mock-avatar" style="background: #ef4444"></div>
+                                <div style="flex:1">
+                                    <div style="display:flex; justify-content:space-between; margin-bottom:4px; font-size:0.9rem; font-weight:600;">
+                                        <span>HealthAI App</span>
+                                        <span style="color:var(--accent)">9.2</span>
+                                    </div>
+                                    <div class="mock-bar"><div class="mock-fill" style="width: 92%;"></div></div>
+                                </div>
+                            </div>
+
+                             <!-- Mock Ranking Item 3 -->
+                             <div class="mock-list-item" style="border:none;">
+                                <div class="mock-avatar" style="background: #eab308"></div>
+                                <div style="flex:1">
+                                    <div style="display:flex; justify-content:space-between; margin-bottom:4px; font-size:0.9rem; font-weight:600;">
+                                        <span>FinBlock</span>
+                                        <span style="color:var(--accent)">8.7</span>
+                                    </div>
+                                    <div class="mock-bar"><div class="mock-fill" style="width: 87%;"></div></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SOCIAL PROOF -->
+    <section class="social-proof">
+        <div class="container metrics-grid reveal">
+            <div class="metric-item">
+                <h3>+50k</h3>
+                <p>Votos Únicos</p>
+            </div>
+            <div class="metric-item">
+                <h3>120+</h3>
+                <p>Eventos Realizados</p>
+            </div>
+            <div class="metric-item">
+                <h3>99.9%</h3>
+                <p>Uptime Garantido</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- HOW IT WORKS -->
+    <section id="como-funciona" class="how-it-works">
+        <div class="container">
+            <div class="section-header reveal">
+                <h2>Simples para quem vota,<br>Poderoso para quem organiza.</h2>
+                <p style="color: var(--text-muted);">O fluxo perfeito para hackathons e demo days.</p>
+            </div>
+
+            <div class="steps-grid reveal">
+                <!-- Step 1 -->
+                <div class="step-card">
+                    <div class="step-number">1</div>
+                    <h3>Criação do Evento</h3>
+                    <p style="color: var(--text-muted); margin-top: 10px; font-size: 0.95rem;">
+                        O administrador configura o evento, datas de votação e cadastra os pitchs com vídeos e descrições.
+                    </p>
+                </div>
+                <!-- Step 2 -->
+                <div class="step-card">
+                    <div class="step-number">2</div>
+                    <h3>Pitchs & Apresentação</h3>
+                    <p style="color: var(--text-muted); margin-top: 10px; font-size: 0.95rem;">
+                        Página exclusiva do evento onde o público visualiza os projetos e os jurados acessam a área técnica.
+                    </p>
+                </div>
+                <!-- Step 3 -->
+                <div class="step-card">
+                    <div class="step-number">3</div>
+                    <h3>Votação Segura</h3>
+                    <p style="color: var(--text-muted); margin-top: 10px; font-size: 0.95rem;">
+                        Login obrigatório. Travas contra votos duplicados e validação de IP garantem a integridade.
+                    </p>
+                </div>
+                <!-- Step 4 -->
+                <div class="step-card">
+                    <div class="step-number">4</div>
+                    <h3>Ranking Automático</h3>
+                    <p style="color: var(--text-muted); margin-top: 10px; font-size: 0.95rem;">
+                        O sistema calcula 50% Voto Popular + 50% Nota Técnica e gera o vencedor instantaneamente.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FEATURES -->
+    <section id="features" class="features">
+        <div class="container">
+            <div class="section-header reveal">
+                <h2>Tecnologia que elimina planilhas</h2>
+            </div>
+            <div class="feature-grid reveal">
+                <div class="feature-card">
+                    <i data-lucide="shield-check" class="feature-icon"></i>
+                    <h4>Auditabilidade Total</h4>
+                    <p style="color: var(--text-muted); margin-top: 8px;">Cada voto é registrado com timestamp, IP e User Agent. Impossível fraudar.</p>
+                </div>
+                <div class="feature-card">
+                    <i data-lucide="users" class="feature-icon"></i>
+                    <h4>Jurados vs Público</h4>
+                    <p style="color: var(--text-muted); margin-top: 8px;">Separe o peso da decisão. Critérios técnicos (Inovação, Design) para especialistas.</p>
+                </div>
+                <div class="feature-card">
+                    <i data-lucide="layout-dashboard" class="feature-icon"></i>
+                    <h4>Dashboard Real-time</h4>
+                    <p style="color: var(--text-muted); margin-top: 8px;">Acompanhe a "corrida de cavalos" ao vivo com WebSockets. Nada de F5.</p>
+                </div>
+                <div class="feature-card">
+                    <i data-lucide="smartphone" class="feature-icon"></i>
+                    <h4>Mobile First</h4>
+                    <p style="color: var(--text-muted); margin-top: 8px;">Interface de votação otimizada para celulares. O público vota direto da plateia.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="faq">
+        <div class="container">
+            <div class="section-header reveal">
+                <h2>Dúvidas Frequentes</h2>
+            </div>
+            <div class="faq-container reveal">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        O sistema impede votos duplicados?
+                        <i data-lucide="chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Sim. Utilizamos um sistema de verificação em três camadas: autenticação obrigatória, trava de banco de dados (constraint unique) e verificação de integridade por evento.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Como funciona o cálculo combinado?
+                        <i data-lucide="chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>O algoritmo normaliza os votos populares em uma escala percentual e faz a média com as notas técnicas (0-10). O peso padrão é 50/50, garantindo equilíbrio.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Posso personalizar a página do meu evento?
+                        <i data-lucide="chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Com certeza. O administrador pode alterar banners, textos descritivos, logos e controlar quais pitchs aparecem na vitrine principal.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FINAL CTA -->
+    <section class="cta-final">
+        <div class="container">
+            <div class="cta-box reveal">
+                <h2 style="margin-bottom: 16px;">Pronto para profissionalizar seu evento?</h2>
+                <p style="color: var(--text-muted); margin-bottom: 32px;">Junte-se a organizadores que abandonaram o papel e as planilhas manuais.</p>
+                
+                <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
+                    <a href="#" class="btn btn-primary btn-large">
+                        Criar Evento Grátis
+                    </a>
+                    <a href="#" class="btn btn-outline btn-large">
+                        Sou Participante / Votante
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <a href="#" class="logo">
+                    <i data-lucide="zap" color="#38bdf8"></i>
+                    Maratona<span>Tech</span>
+                </a>
+                <p>Plataforma líder em gestão de competições tecnológicas, hackathons e demodays.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Produto</h4>
+                <ul>
+                    <li><a href="#">Funcionalidades</a></li>
+                    <li><a href="#">Preços</a></li>
+                    <li><a href="#">Segurança</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Legal</h4>
+                <ul>
+                    <li><a href="#">Termos de Uso</a></li>
+                    <li><a href="#">Privacidade</a></li>
+                    <li><a href="#">Contato</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
