@@ -20,37 +20,63 @@
 
     <main class="auth-page">
         <div class="auth-card">
-            <h2>Cadastrar nova conta</h2>
-            <p class="muted">Crie sua conta para participar das votações e eventos.</p>
+            <aside class="auth-left">
+                <div class="brand"><i data-lucide="calendar"></i> Maratona Tech</div>
+                <h3>Crie sua conta</h3>
+                <p>Organize reservas, otimize espaços e participe dos eventos. Preencha os dados para se cadastrar.</p>
+                <div class="secure-badge"><i data-lucide="lock"></i> Cadastro Seguro</div>
+            </aside>
 
-            <form id="register-form">
-                <div class="form-row">
-                    <label for="reg-name">Nome completo</label>
-                    <input id="reg-name" name="name" type="text" placeholder="Seu nome" required>
-                </div>
+            <section class="auth-right">
+                <h2>Crie sua conta</h2>
+                <p class="muted">Preencha os dados para se cadastrar.</p>
 
-                <div class="form-row">
-                    <label for="reg-email">E-mail</label>
-                    <input id="reg-email" name="email" type="email" placeholder="seu@email.com" required>
-                </div>
+                <form id="register-form">
+                    <div class="form-row">
+                        <label for="reg-name">Usuário</label>
+                        <div class="input-with-icon">
+                            <i data-lucide="user"></i>
+                            <input id="reg-name" name="name" type="text" placeholder="Seu usuário" required>
+                        </div>
+                    </div>
 
-                <div class="form-row">
-                    <label for="reg-password">Senha</label>
-                    <input id="reg-password" name="password" type="password" placeholder="Mínimo 6 caracteres" required>
-                </div>
+                    <div class="form-row">
+                        <label for="reg-email">E-mail</label>
+                        <div class="input-with-icon">
+                            <i data-lucide="mail"></i>
+                            <input id="reg-email" name="email" type="email" placeholder="seu@email.com" required>
+                        </div>
+                    </div>
 
-                <div class="form-row">
-                    <label for="reg-password-confirm">Confirmar senha</label>
-                    <input id="reg-password-confirm" name="passwordConfirm" type="password" placeholder="Repita a senha" required>
-                </div>
+                    <div class="form-row">
+                        <label for="reg-password">Senha</label>
+                        <div class="input-with-icon">
+                            <i data-lucide="lock"></i>
+                            <input id="reg-password" name="password" type="password" placeholder="Mínimo 6 caracteres" required>
+                            <button type="button" class="toggle-password" data-target="#reg-password" aria-label="Alternar visibilidade"></button>
+                        </div>
+                    </div>
 
-                <div class="form-actions">
-                    <button type="submit" class="btn btn-primary">Criar Conta</button>
-                    <a href="login.html" class="link">Já tem conta? Entrar</a>
-                </div>
+                    <div class="form-row">
+                        <label for="reg-password-confirm">Confirmar Senha</label>
+                        <div class="input-with-icon">
+                            <i data-lucide="check-circle"></i>
+                            <input id="reg-password-confirm" name="passwordConfirm" type="password" placeholder="Repita a senha" required>
+                            <button type="button" class="toggle-password" data-target="#reg-password-confirm" aria-label="Alternar visibilidade"></button>
+                        </div>
+                    </div>
 
-                <div id="register-feedback" class="form-feedback" aria-live="polite"></div>
-            </form>
+                    <div class="form-actions">
+                        <button type="submit" class="primary-cta">CADASTRAR</button>
+                    </div>
+
+                    <div style="margin-top:14px; text-align:center;">
+                        <a href="login.html" class="link">Já tem conta? Faça login aqui</a>
+                    </div>
+
+                    <div id="register-feedback" class="form-feedback" aria-live="polite"></div>
+                </form>
+            </section>
         </div>
     </main>
 </body>

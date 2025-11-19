@@ -20,27 +20,48 @@
 
     <main class="auth-page">
         <div class="auth-card">
-            <h2>Entrar na sua conta</h2>
-            <p class="muted">Use seu e-mail e senha para acessar.</p>
+            <aside class="auth-left">
+                <div class="brand"><i data-lucide="calendar"></i> Maratona Tech</div>
+                <h3>Bem-vindo!</h3>
+                <p>Faça login para acessar o sistema e gerenciar suas reservas e participações em eventos.</p>
+                <div class="secure-badge"><i data-lucide="shield-check"></i> Acesso Seguro</div>
+            </aside>
 
-            <form id="login-form">
-                <div class="form-row">
-                    <label for="login-email">E-mail</label>
-                    <input id="login-email" name="email" type="email" placeholder="seu@email.com" required>
-                </div>
+            <section class="auth-right">
+                <h2>Entrar na sua conta</h2>
+                <p class="muted">Use seu e-mail e senha para acessar.</p>
 
-                <div class="form-row">
-                    <label for="login-password">Senha</label>
-                    <input id="login-password" name="password" type="password" placeholder="••••••••" required>
-                </div>
+                <form id="login-form">
+                    <div class="form-row">
+                        <label for="login-email">Usuário / E-mail</label>
+                        <div class="input-with-icon">
+                            <i data-lucide="user"></i>
+                            <input id="login-email" name="email" type="email" placeholder="seu@email.com" required>
+                        </div>
+                    </div>
 
-                <div class="form-actions">
-                    <button type="submit" class="btn btn-primary">Entrar</button>
-                    <a href="register.html" class="link">Não tem conta? Cadastre-se</a>
-                </div>
+                    <div class="form-row">
+                        <label for="login-password">Senha</label>
+                        <div class="input-with-icon">
+                            <i data-lucide="lock"></i>
+                            <input id="login-password" name="password" type="password" placeholder="••••••••" required>
+                            <button type="button" class="toggle-password" data-target="#login-password" aria-label="Alternar visibilidade">
+                                <!-- ícone será inserido pelo JS via lucide -->
+                            </button>
+                        </div>
+                    </div>
 
-                <div id="login-feedback" class="form-feedback" aria-live="polite"></div>
-            </form>
+                    <div class="form-actions">
+                        <button type="submit" class="primary-cta">ENTRAR</button>
+                    </div>
+
+                    <div style="margin-top:14px; text-align:center;">
+                        <a href="register.html" class="link">Não tem conta? Cadastre-se</a>
+                    </div>
+
+                    <div id="login-feedback" class="form-feedback" aria-live="polite"></div>
+                </form>
+            </section>
         </div>
     </main>
 </body>

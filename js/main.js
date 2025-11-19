@@ -122,3 +122,32 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 });
+
+// Toggle visibility of password inputs (icons via lucide)
+document.addEventListener('DOMContentLoaded', () => {
+    try {
+        const toggles = document.querySelectorAll('.toggle-password');
+        toggles.forEach(btn => {
+            // set initial icon
+            if (typeof lucide !== 'undefined' && lucide.icons && lucide.icons.eye) {
+                btn.innerHTML = lucide.icons.eye.toSvg();
+            }
+
+            btn.addEventListener('click', () => {
+                const targetSelector = btn.dataset.target;
+                const input = document.querySelector(targetSelector);
+                if (!input) return;
+
+                if (input.type === 'password') {
+                    input.type = 'text';
+                    if (typeof lucide !== 'undefined' && lucide.icons && lucide.icons['eye-off']) btn.innerHTML = lucide.icons['eye-off'].toSvg();
+                } else {
+                    input.type = 'password';
+                    if (typeof lucide !== 'undefined' && lucide.icons && lucide.icons.eye) btn.innerHTML = lucide.icons.eye.toSvg();
+                }
+            });
+        });
+    } catch (err) {
+        console.warn('Toggle password init failed', err);
+    }
+});
