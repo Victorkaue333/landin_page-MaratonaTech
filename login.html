@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login — Maratona Tech</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="js/main.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <i data-lucide="zap" color="#38bdf8"></i>
+                Maratona<span>Tech</span>
+            </a>
+        </div>
+    </header>
+
+    <main class="auth-page">
+        <div class="auth-card">
+            <h2>Entrar na sua conta</h2>
+            <p class="muted">Use seu e-mail e senha para acessar.</p>
+
+            <form id="login-form">
+                <div class="form-row">
+                    <label for="login-email">E-mail</label>
+                    <input id="login-email" name="email" type="email" placeholder="seu@email.com" required>
+                </div>
+
+                <div class="form-row">
+                    <label for="login-password">Senha</label>
+                    <input id="login-password" name="password" type="password" placeholder="••••••••" required>
+                </div>
+
+                <div class="form-actions">
+                    <button type="submit" class="btn btn-primary">Entrar</button>
+                    <a href="register.html" class="link">Não tem conta? Cadastre-se</a>
+                </div>
+
+                <div id="login-feedback" class="form-feedback" aria-live="polite"></div>
+            </form>
+        </div>
+    </main>
+</body>
+</html>

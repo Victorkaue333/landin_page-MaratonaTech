@@ -618,3 +618,47 @@ footer {
     .hero-text h1 { font-size: 2.5rem; }
     .cta-group { flex-direction: column; }
 }
+
+/* ----------------------------------
+   Styles para telas de Login / Cadastro
+   ---------------------------------- */
+.auth-page {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 120px 24px;
+}
+.auth-card {
+    width: 100%;
+    max-width: 420px;
+    background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+    border: 1px solid var(--border);
+    padding: 32px;
+    border-radius: 14px;
+    box-shadow: 0 10px 30px rgba(2,6,23,0.6);
+}
+.auth-card h2 { margin-bottom: 6px; }
+.auth-card .muted { color: var(--text-muted); margin-bottom: 18px; }
+.form-row { margin-bottom: 14px; display:flex; flex-direction:column; gap:8px; }
+.form-row label { font-size: 0.9rem; color: var(--text-muted); }
+.form-row input {
+    padding: 12px 14px;
+    border-radius: 10px;
+    border: 1px solid rgba(255,255,255,0.06);
+    background: rgba(255,255,255,0.02);
+    color: var(--text-main);
+    outline: none;
+}
+.form-row input:focus { box-shadow: 0 6px 18px rgba(0,194,203,0.06); border-color: var(--primary); }
+.form-actions { display:flex; gap:12px; align-items:center; justify-content:space-between; margin-top:8px; }
+.form-actions .link { color: var(--text-muted); font-size: 0.95rem; }
+.form-actions .link:hover { color: var(--primary); }
+.form-feedback { margin-top: 12px; font-size: 0.95rem; }
+.form-feedback.error { color: #ff6b6b; }
+.form-feedback.success { color: #86efac; }
+
+@media (max-width: 520px) {
+    .auth-card { padding: 20px; border-radius: 12px; }
+    .form-actions { flex-direction: column; align-items:stretch; gap:10px; }
+}

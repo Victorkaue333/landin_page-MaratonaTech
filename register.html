@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro — Maratona Tech</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="js/main.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <i data-lucide="zap" color="#38bdf8"></i>
+                Maratona<span>Tech</span>
+            </a>
+        </div>
+    </header>
+
+    <main class="auth-page">
+        <div class="auth-card">
+            <h2>Cadastrar nova conta</h2>
+            <p class="muted">Crie sua conta para participar das votações e eventos.</p>
+
+            <form id="register-form">
+                <div class="form-row">
+                    <label for="reg-name">Nome completo</label>
+                    <input id="reg-name" name="name" type="text" placeholder="Seu nome" required>
+                </div>
+
+                <div class="form-row">
+                    <label for="reg-email">E-mail</label>
+                    <input id="reg-email" name="email" type="email" placeholder="seu@email.com" required>
+                </div>
+
+                <div class="form-row">
+                    <label for="reg-password">Senha</label>
+                    <input id="reg-password" name="password" type="password" placeholder="Mínimo 6 caracteres" required>
+                </div>
+
+                <div class="form-row">
+                    <label for="reg-password-confirm">Confirmar senha</label>
+                    <input id="reg-password-confirm" name="passwordConfirm" type="password" placeholder="Repita a senha" required>
+                </div>
+
+                <div class="form-actions">
+                    <button type="submit" class="btn btn-primary">Criar Conta</button>
+                    <a href="login.html" class="link">Já tem conta? Entrar</a>
+                </div>
+
+                <div id="register-feedback" class="form-feedback" aria-live="polite"></div>
+            </form>
+        </div>
+    </main>
+</body>
+</html>

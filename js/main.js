@@ -50,3 +50,75 @@ faqItems.forEach(item => {
         }
     });
 });
+
+// ---------------------------
+// Validação básica de Auth
+// ---------------------------
+document.addEventListener('DOMContentLoaded', () => {
+    const loginForm = document.getElementById('login-form');
+    const registerForm = document.getElementById('register-form');
+
+    if (loginForm) {
+        loginForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const email = document.getElementById('login-email').value.trim();
+            const pass = document.getElementById('login-password').value;
+            const feedback = document.getElementById('login-feedback');
+            feedback.className = 'form-feedback';
+
+            if (!email || !pass) {
+                feedback.textContent = 'Preencha e-mail e senha.';
+                feedback.classList.add('error');
+                return;
+            }
+
+            // Simulação: aqui você integraria com sua API
+            feedback.textContent = 'Autenticando...';
+            feedback.classList.add('success');
+
+            setTimeout(() => {
+                feedback.textContent = 'Login bem-sucedido (simulado). Redirecionando...';
+                // exemplo de redirecionamento para index
+                window.location.href = 'index.html';
+            }, 900);
+        });
+    }
+
+    if (registerForm) {
+        registerForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const name = document.getElementById('reg-name').value.trim();
+            const email = document.getElementById('reg-email').value.trim();
+            const pass = document.getElementById('reg-password').value;
+            const passConfirm = document.getElementById('reg-password-confirm').value;
+            const feedback = document.getElementById('register-feedback');
+            feedback.className = 'form-feedback';
+
+            if (!name || !email || !pass || !passConfirm) {
+                feedback.textContent = 'Preencha todos os campos.';
+                feedback.classList.add('error');
+                return;
+            }
+
+            if (pass.length < 6) {
+                feedback.textContent = 'A senha deve ter pelo menos 6 caracteres.';
+                feedback.classList.add('error');
+                return;
+            }
+
+            if (pass !== passConfirm) {
+                feedback.textContent = 'As senhas não coincidem.';
+                feedback.classList.add('error');
+                return;
+            }
+
+            feedback.textContent = 'Criando conta...';
+            feedback.classList.add('success');
+
+            setTimeout(() => {
+                feedback.textContent = 'Conta criada (simulado). Redirecionando para login...';
+                window.location.href = 'login.html';
+            }, 1000);
+        });
+    }
+});
