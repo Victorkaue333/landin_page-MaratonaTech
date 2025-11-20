@@ -151,3 +151,25 @@ document.addEventListener('DOMContentLoaded', () => {
         console.warn('Toggle password init failed', err);
     }
 });
+
+// Mobile menu toggle (header)
+document.addEventListener('DOMContentLoaded', () => {
+    const mobileToggle = document.querySelector('.mobile-toggle');
+    const headerEl = document.querySelector('header');
+    if (mobileToggle && headerEl) {
+        mobileToggle.addEventListener('click', () => {
+            headerEl.classList.toggle('nav-open');
+            // toggle lucide icon between menu and x
+            const icon = mobileToggle.querySelector('svg');
+            if (icon) {
+                try {
+                    if (headerEl.classList.contains('nav-open')) {
+                        mobileToggle.innerHTML = lucide.icons.x.toSvg();
+                    } else {
+                        mobileToggle.innerHTML = lucide.icons.menu.toSvg();
+                    }
+                } catch (err) { /* ignore */ }
+            }
+        });
+    }
+});

@@ -5,7 +5,7 @@
 :root {
     /* Base Dark Theme (Mantendo a base sólida e elegante) */
     --bg-dark: #071022;      /* Dark Navy - Fundo Principal (mais profundo) */
-    --bg-card: #0f1724;      /* Slate - Fundo de Cartões (escuro)	 */
+    --bg-card: #0f1724;      /* Slate - Fundo de Cartões (escuro) */
 
     /* Nova Paleta Melhorada */
     --primary: #4f46e5;      /* Indigo vibrante (início do gradiente) */
@@ -69,6 +69,7 @@ img { max-width: 100%; display: block; }
 .btn {
     display: inline-flex;
     align-items: center;
+    justify-content: center; /* Garante alinhamento em larguras fixas */
     gap: 8px;
     padding: 12px 24px;
     border-radius: 8px;
@@ -159,7 +160,7 @@ header {
     top: 0;
     width: 100%;
     z-index: 1000;
-    background: rgba(15, 23, 42, 0.85);
+    background: rgba(7, 16, 34, 0.85); /* Ajustado para o novo bg-dark */
     backdrop-filter: blur(16px);
     border-bottom: 1px solid var(--border);
 }
@@ -178,6 +179,7 @@ header {
     align-items: center;
     gap: 8px;
     color: #fff;
+    z-index: 1001; /* Fica acima do menu mobile */
 }
 
 .logo span { 
@@ -210,7 +212,7 @@ header {
     gap: 16px;
 }
 
-.mobile-toggle { display: none; cursor: pointer; }
+.mobile-toggle { display: none; cursor: pointer; z-index: 1001; }
 
 /* * ==========================================
  * SECTION: HERO
@@ -231,8 +233,7 @@ header {
     transform: translateX(-50%);
     width: 800px;
     height: 600px;
-    /* Gradiente radial combinando Turquesa e Roxo */
-    background: radial-gradient(circle, rgba(0, 194, 203, 0.15) 0%, rgba(123, 31, 162, 0.1) 40%, rgba(15, 23, 42, 0) 70%);
+    background: radial-gradient(circle, rgba(79, 70, 229, 0.15) 0%, rgba(124, 58, 237, 0.1) 40%, rgba(7, 16, 34, 0) 70%);
     z-index: -1;
     filter: blur(60px);
 }
@@ -274,7 +275,7 @@ header {
     border-radius: 16px;
     box-shadow: 
         0 25px 50px -12px rgba(0, 0, 0, 0.5),
-        0 0 0 1px rgba(0, 194, 203, 0.1); /* Borda sutil turquesa */
+        0 0 0 1px rgba(6, 182, 212, 0.1); /* Borda sutil turquesa */
     transform: rotateY(-5deg) rotateX(2deg);
     animation: float 6s ease-in-out infinite;
     overflow: hidden;
@@ -345,7 +346,7 @@ header {
 .social-proof {
     padding: 40px 0;
     border-bottom: 1px solid var(--border);
-    background: rgba(30, 41, 59, 0.3);
+    background: rgba(15, 23, 36, 0.4); /* Ajuste suave */
 }
 
 .metrics-grid {
@@ -422,13 +423,13 @@ header {
 .step-card:hover {
     transform: translateY(-8px);
     border-color: var(--primary);
-    box-shadow: 0 10px 30px -10px rgba(0, 194, 203, 0.2);
+    box-shadow: 0 10px 30px -10px rgba(6, 182, 212, 0.2);
 }
 
 .step-number {
     width: 44px;
     height: 44px;
-    background: rgba(0, 194, 203, 0.1);
+    background: rgba(6, 182, 212, 0.1);
     border: 1px solid var(--primary);
     color: var(--primary);
     display: flex;
@@ -438,7 +439,7 @@ header {
     font-weight: 700;
     font-size: 1.1rem;
     margin-bottom: 24px;
-    box-shadow: 0 0 15px rgba(0, 194, 203, 0.15);
+    box-shadow: 0 0 15px rgba(79, 70, 229, 0.2);
 }
 
 /* * ==========================================
@@ -447,7 +448,7 @@ header {
  */
 .features {
     padding: 100px 0;
-    background: linear-gradient(to bottom, var(--bg-dark), #0b111a);
+    background: linear-gradient(to bottom, var(--bg-dark), #050c1a);
     position: relative;
 }
 
@@ -476,7 +477,7 @@ header {
     margin-bottom: 20px;
     width: 40px;
     height: 40px;
-    filter: drop-shadow(0 0 8px rgba(251, 191, 36, 0.3));
+    filter: drop-shadow(0 0 8px rgba(6, 182, 212, 0.3));
 }
 
 /* * ==========================================
@@ -535,7 +536,7 @@ header {
     content: '';
     position: absolute;
     inset: 0;
-    background: radial-gradient(circle at center, rgba(123, 31, 162, 0.2) 0%, var(--bg-dark) 70%);
+    background: radial-gradient(circle at center, rgba(124, 58, 237, 0.2) 0%, var(--bg-dark) 70%);
     z-index: -1;
 }
 
@@ -566,7 +567,7 @@ header {
 footer {
     border-top: 1px solid var(--border);
     padding: 60px 0;
-    background: #06090f; /* Quase preto */
+    background: #050c1a; /* Quase preto */
 }
 
 .footer-grid {
@@ -590,42 +591,11 @@ footer {
 .footer-col ul li a { color: var(--text-muted); font-size: 0.9rem; }
 .footer-col ul li a:hover { color: var(--primary); }
 
+
 /* * ==========================================
- * RESPONSIVE MEDIA QUERIES
+ * AUTH PAGE STYLES
  * ==========================================
  */
-@media (min-width: 768px) {
-    .steps-grid::before { display: block; }
-}
-
-@media (max-width: 900px) {
-    .hero-content {
-        grid-template-columns: 1fr;
-        text-align: center;
-    }
-
-    .hero-text p { margin: 0 auto 40px; }
-    .cta-group { justify-content: center; }
-
-    .hero-visual {
-        margin-top: 60px;
-    }
-
-    .footer-grid { grid-template-columns: 1fr; text-align: center; }
-    .footer-brand p { margin: 16px auto; }
-}
-
-@media (max-width: 600px) {
-    .nav-links { display: none; }
-    .mobile-toggle { display: block; color: white; }
-    .hero-text h1 { font-size: 2.5rem; }
-    .cta-group { flex-direction: column; }
-}
-
-/* ----------------------------------
-   Styles para telas de Login / Cadastro
-   Layout: cartão dividido (painel esquerdo colorido + painel direito formulário)
-   ---------------------------------- */
 .auth-page {
     min-height: 100vh;
     display: flex;
@@ -683,6 +653,7 @@ footer {
 .input-with-icon input {
     flex:1; padding: 12px 14px; border-radius: 10px; border: 1px solid #e6edf3; background: #fbfdff; color: #081023;
     font-size: 0.98rem; outline: none; box-shadow: none;
+    width: 100%; /* Garante que o input ocupe espaço no flex */
 }
 .input-with-icon input:focus { box-shadow: 0 10px 30px rgba(79,70,229,0.08); border-color: rgba(79,70,229,0.9); }
 .toggle-password { background: transparent; border: none; cursor: pointer; padding:6px; display:flex; align-items:center; justify-content:center; }
@@ -697,13 +668,172 @@ footer {
 .form-feedback.error { color: #ef4444; }
 .form-feedback.success { color: #10b981; }
 
+
+/* * ==========================================
+ * RESPONSIVE MEDIA QUERIES
+ * ==========================================
+ */
+
+@media (min-width: 768px) {
+    .steps-grid::before { display: block; }
+}
+
 @media (max-width: 900px) {
+    /* Hero Section Adjustments */
+    .hero { padding-top: 120px; padding-bottom: 60px; }
+    .hero-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 40px;
+    }
+    .hero-text h1 { font-size: 3rem; }
+    .hero-text p { margin: 0 auto 40px; }
+    .cta-group { justify-content: center; }
+    .hero-visual { margin-top: 40px; }
+
+    /* General Section Adjustments */
+    .how-it-works, .features, .faq, .cta-final { padding: 60px 0; }
+    .section-header { margin-bottom: 50px; }
+
+    /* Footer Adjustments */
+    .footer-grid { grid-template-columns: 1fr; text-align: center; gap: 30px; }
+    .footer-brand p { margin: 16px auto; }
+
+    /* Auth Card Adjustments */
     .auth-card { flex-direction: column; max-width: 560px; }
-    .auth-left { flex-basis: auto; padding: 28px; }
-    .auth-right { padding: 28px; }
+    .auth-left { flex-basis: auto; padding: 32px; text-align: center; }
+    .auth-left .brand { justify-content: center; }
+    .auth-left p { margin: 0 auto; }
+    .auth-right { padding: 32px; }
+}
+
+@media (max-width: 600px) {
+    /* Header & Navigation Mobile Drawer */
+    .nav-links {
+        position: absolute;
+        top: 80px;
+        left: 0;
+        width: 100%;
+        background: var(--bg-dark);
+        flex-direction: column;
+        padding: 24px;
+        gap: 20px;
+        border-bottom: 1px solid var(--border);
+        /* Hidden by default, requires JS to toggle .active */
+        display: none; 
+        box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    }
+    
+    .nav-links.active {
+        display: flex;
+        animation: slideDown 0.3s ease forwards;
+    }
+    
+    .nav-actions { display: none; /* Hide login buttons on very small screens or move inside nav-links */ }
+    
+    .mobile-toggle { display: block; color: white; font-size: 1.5rem; }
+
+    /* Hero Typography */
+    .hero-text h1 { font-size: 2.2rem; }
+    .hero-text p { font-size: 1rem; }
+    
+    /* Buttons full width */
+    .cta-group { flex-direction: column; width: 100%; }
+    .btn-large { width: 100%; }
+
+    /* Cards and Grid */
+    .mock-stat-row { flex-direction: column; gap: 16px; }
+    .mock-card { margin: 0; }
+    
+    /* CTA Box */
+    .cta-box { padding: 32px 20px; }
+    .cta-box h2 { font-size: 1.8rem; }
 }
 
 @media (max-width: 520px) {
-    .auth-page { padding: 80px 16px; }
+    .auth-page { padding: 60px 16px; }
+    .auth-right { padding: 24px; }
     .auth-right h2 { font-size:1.4rem; }
+
+/* ----------------------------------
+   Responsividade adicional - breakpoints amplos
+   ---------------------------------- */
+@media (max-width: 1200px) {
+    .container { padding: 0 20px; }
+    .hero-text h1 { font-size: 3.2rem; }
+    .hero-text p { max-width: 420px; }
+    .hero-content { gap: 40px; }
+    .mockup-window { transform: none; max-width: 520px; margin: 0 auto; }
+}
+
+@media (max-width: 992px) {
+    header .nav-container { height: 72px; }
+    .nav-links { display: none; }
+    .mobile-toggle { display: block; }
+    .nav-actions { gap: 10px; }
+    .hero { padding: 140px 0 60px; }
+    .hero-text h1 { font-size: 2.6rem; }
+    .hero-visual { margin-top: 40px; }
+    .footer-grid { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 768px) {
+    .hero { padding: 120px 0 40px; }
+    .hero-text h1 { font-size: 2.2rem; }
+    .hero-text p { font-size: 1rem; }
+    .mockup-window { display: none; }
+    .steps-grid { gap: 20px; }
+    .feature-grid { gap: 20px; }
+    .auth-card { max-width: 720px; }
+}
+
+@media (max-width: 600px) {
+    header { backdrop-filter: blur(6px); }
+    .nav-container { height: 64px; }
+    .logo { font-size: 1.2rem; }
+    .hero { padding: 100px 0 30px; }
+    .hero-text h1 { font-size: 1.9rem; }
+    .hero-text p { font-size: 0.98rem; }
+    .cta-group { flex-direction: column; }
+    .auth-card { margin: 0 12px; border-radius: 12px; }
+    .auth-left { padding: 22px; }
+    .auth-right { padding: 20px; }
+    .form-row label { font-size: 0.85rem; }
+    .input-with-icon input { font-size: 0.95rem; padding: 10px 12px; }
+    .primary-cta { padding: 12px 14px; }
+}
+
+@media (max-width: 420px) {
+    .hero { padding: 90px 0 20px; }
+    .hero-text h1 { font-size: 1.6rem; }
+    .badge { padding: 6px 12px; font-size: 0.8rem; }
+    .auth-left h3 { font-size: 1.2rem; }
+    .auth-left p { font-size: 0.95rem; max-width: none; }
+    .auth-right { padding: 16px; }
+    .form-actions { flex-direction: column; gap: 8px; }
+    .form-actions .link { text-align: center; }
+}
+
+/* Mobile nav open state */
+header.nav-open .nav-links {
+    display: flex;
+    position: absolute;
+    top: 72px;
+    left: 0;
+    right: 0;
+    background: rgba(7,16,34,0.98);
+    flex-direction: column;
+    gap: 10px;
+    padding: 14px 20px;
+    border-bottom: 1px solid rgba(255,255,255,0.03);
+}
+
+header .nav-links a { padding: 8px 6px; border-radius: 8px; }
+    
+    .metric-item h3 { font-size: 2rem; }
+}
+
+@keyframes slideDown {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
 }
